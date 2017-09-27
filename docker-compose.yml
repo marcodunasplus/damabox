@@ -84,6 +84,9 @@ services:
       - "discovery.type=single-node"
     volumes:
       - ${ES_DATADIR:-./config/elasticsearch}:/usr/share/elasticsearch/config
+    mem_limit: 1g
+    cpu_count: 1
+    cpu_percent: 10
     networks:
       - connect
 
